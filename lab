@@ -10,12 +10,15 @@ namespace Zenon
         {
             InitializeComponent();
         }
-        private float СoordinateTortilla = 150;
-        private float СoordinateAxiles=0;
-        private float VelocityAxiles;
-        private float VelocityTortilla;
-        private float Time = 0;
-        private float Distance;
+       
+        private float СOORDINATE_TORTILLA = 150;
+        private float СoordinateAxiles=0; // RENAME
+        private float Time = 0; //RENAME
+        
+        private float _velocityAxiles;
+        private float VelocityTortilla; // RENAME
+        private float Distance; // RENAME
+        
         private void PictureBox1_Paint(object sender, PaintEventArgs e)
         {   
             Graphics grf = e.Graphics;
@@ -28,7 +31,7 @@ namespace Zenon
         {
             if (СoordinateAxiles > pictureBox1.Width)
             {
-                СoordinateAxiles = -50;
+                СoordinateAxiles = -50; //что такое -50?
             }
             if (СoordinateTortilla > pictureBox1.Width)
             {
@@ -67,7 +70,7 @@ namespace Zenon
             {
                 timer1.Start();
                 timer1.Interval = 10;
-                float.TryParse(vax.Text, out VelocityAxiles);
+                float.TryParse(vax.Text, out VelocityAxiles); // если ввели текст?
                 float.TryParse(vtor.Text, out VelocityTortilla);
             }
         }
